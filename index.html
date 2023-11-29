@@ -352,13 +352,13 @@
             frame.
           </p> -->
         </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/overallV2.png"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Overview of the proposed PixelLM model architecture. (Left) Overall architecture. (Right) The proposed lightweigh pixel decoder. Trainable LoRA parameters are incorporated into the LLM. All parameters except those for the CLIP encoder and LLM are trainable.</p>
-          </div>
+        <!-- <div class="columns is-vcentered interpolation-panel"> -->
+        <div class="column is-3 has-text-centered">
+          <img src="./static/images/overallV2.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          <p>Overview of the proposed PixelLM model architecture. (Left) Overall architecture. (Right) The proposed lightweigh pixel decoder. Trainable LoRA parameters are incorporated into the LLM. All parameters except those for the CLIP encoder and LLM are trainable.</p>
+        </div>
           <!-- <div class="column interpolation-video-column">
             <div id="interpolation-image-wrapper">
               Loading...
@@ -373,11 +373,30 @@
                  alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
           </div> -->
-        </div>
+        <!-- </div> -->
         <br/>
         <!--/ Interpolating. -->
 
-     
+        <!-- Re-rendering. -->
+        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
+        <div class="content has-text-justified">
+          <p>
+            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
+            viewpoint such as a stabilized camera by playing back the training deformations.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <video id="replay-video"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/replay.mp4"
+                    type="video/mp4">
+          </video>
+        </div> -->
+        <!--/ Re-rendering. -->
 
       </div>
     </div>
