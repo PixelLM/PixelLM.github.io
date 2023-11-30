@@ -88,14 +88,14 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">PixelLM:Pixel Reasoning with Large Multimodal Model</h1>
+          <h1 class="title is-1 publication-title"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/> PixelLM:Pixel Reasoning with Large Multimodal Model</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Zhongwei Ren</a><sup>1</sup>,</span>
+              <a href="">Zhongwei Ren</a><sup>1,*</sup>,</span>
             <span class="author-block">
-              <a href="">Zhicheng Huang</a><sup>2</sup>,</span>
+              <a href="">Zhicheng Huang</a><sup>2,*</sup>,</span>
             <span class="author-block">
-              <a href="">Yunchao Wei</a><sup>1</sup>,
+              <a href="">Yunchao Wei</a><sup>1,<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>,
             </span>
             <span class="author-block">
               <a href="">Yao Zhao</a><sup>1</sup>,
@@ -113,8 +113,12 @@
 
           <div class="is-size-5 publication-authors">
             <span class="author-block"><sup>1</sup>Beijing Jiaotong University,</span>
-            <span class="author-block"><sup>2</sup>University of Science and Technology Beijing</span>
+            <span class="author-block"><sup>2</sup>University of Science and Technology Beijing,</span>
             <span class="author-block"><sup>3</sup>ByteDance</span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">(<sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>Correspondence)</span>
           </div>
 
           <div class="column has-text-centered">
@@ -176,21 +180,19 @@
   </div>
 </section>
 
-<!-- <section class="hero teaser">
+<section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
+      <img src="./static/images/results_show_v4.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
+        PixelLM is an effective and efficient LMM for pixel-level reasoning and understanding. We show its visualization results in following scenarios:
+        1. Multi-target reasoning segmentation; 2. Instance-level segmentation tied with text description; 3. Multi-referring segmentation; 4. Conversation
       </h2>
     </div>
   </div>
-</section> -->
+</section>
 
 <!-- 
 <section class="hero is-light is-small">
@@ -256,7 +258,7 @@
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Abstract</h2>
         <div class="content has-text-justified">
           <!-- <p>
             We present the first method capable of photorealistically reconstructing a non-rigidly
@@ -280,19 +282,31 @@
         </div>
       </div>
     </div>
-    <!--/ Abstract. -->
+  </div>
+</section>
 
-    <!-- Paper video. -->
-    <!-- <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">🔥 Highlights</h2>
       </div>
-    </div> -->
-    <!--/ Paper video. -->
+    </div>
+
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p>
+          1. We present PixelLM, a novel LMM for pixel-level reasoning and understanding. It handles tasks with diverse reasoning complexities, maintaining high efficiency.
+        </p>
+        <p>
+          2. We construct MUSE, a high-quality multi-target reasoning segmentation dataset, facilitating model training and evaluation in future research.
+        </p>
+        <p>
+          3. PixelLM achieves new state-of-the-art results across a spectrum of benchmarks, significantly surpassing competing methods.
+        </p>
+    
+      </div>
+    </div>
   </div>
 </section>
 
@@ -300,7 +314,7 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <div class="columns is-centered">
+    <!-- <div class="columns is-centered"> -->
 
       <!-- Visual Effects. -->
       <!-- <div class="column">
@@ -339,21 +353,24 @@
     <!--/ Matting. -->
 
     <!-- Animation. -->
-    <div class="columns is-centered">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Model Architecture</h2>
+        <h2 class="title is-3"> <img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Model Architecture</h2>
+      </div>
+    </div>
+    <div class="columns is-centered ">
+      <div class="column is-full-width">
+
 
         <!-- Interpolating. -->
         <!-- <h3 class="title is-4">Interpolating states</h3> -->
-        <div class="content has-text-justified">
-          <!-- <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p> -->
-        </div>
         <!-- <div class="columns is-vcentered interpolation-panel"> -->
-        <div class="column is-3 has-text-centered">
+          
+          <p>
+            PixelLM features a streamlined architecture, comprising four main parts: i) a pretrained CLIP-ViT vision encoder which aligns with text, ii) a large language model iii) a lightweight pixel decoder and iv) a segmentation codebook.  PixelLM processes image and query text, yielding interleaved text description and corresponding masks for varied target.
+          </p>
+          
+        <div class="column is-centered has-text-centered">
           <img src="./static/images/overallV2.png"
                 class="interpolation-image"
                 alt="Interpolate start reference image."/>
@@ -400,36 +417,65 @@
 
       </div>
     </div>
-    <!--/ Animation. -->
 
 
-    <!-- Concurrent Work. -->
-    <!-- <div class="columns is-centered">
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
+        <h2 class="title is-3"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Multi-reasoning segmentation dataset (MUSE)</h2>
+      </div>
+    </div>
 
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <p>
+          We introduce a structured annotation pipeline for constructing the multi-target reasoning segmentation (MUSE) data. MUSE stands out with its open-set concepts, detailed object descriptions, complex multi-target question-answer pairs, and instance-level mask annotations. Specifically, we feed all the instance category names and corresponding bounding box coordinates in the image to GPT-4V. Using carefully crafted prompts, GPT-4V autonomously selects instances to construct question-answer pairs relevant to the image content. 
+        </p>
+        <div class="column is-centered has-text-centered">
+          <img src="./static/images/data_example.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          <p>The left panel illustrates the prompt employed in our GPT-4V data generation pipeline. The right panel showcases an example of the generated data.</p>
+
+          <!-- <p>
+            A total of 910k high-quality instance segmentation masks are selected from the LVIS dataset, along with detailed textual descriptions based on image content. Utilizing these instances, we construct 246k question-answer pairs, averaging 3.7 targets per answer. This dataset is then divided into three splits: {\tt train}, {\tt val}, and {\tt test}, containing 239k, 2.8k, and 4.3k question-answer pairs, respectively. The test split comprises two parts:  the number of targets involved in the question are less or more than three.
           </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          <img src="./static/images/data_ana.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          <p>Dataset statistics.</p> -->
+
         </div>
       </div>
-    </div> -->
-    <!--/ Concurrent Work. -->
+    </div>
+  </div>
+</section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <p>
+      A total of 910k high-quality instance segmentation masks are selected from the LVIS dataset, along with detailed textual descriptions based on image content. Utilizing these instances, we construct 246k question-answer pairs, averaging 3.7 targets per answer. This dataset is then divided into three splits: {\tt train}, {\tt val}, and {\tt test}, containing 239k, 2.8k, and 4.3k question-answer pairs, respectively. The test split comprises two parts:  the number of targets involved in the question are less or more than three.
+    </p>
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <div class="column is-centered has-text-centered">
+          
+
+          
+          <img src="./static/images/data_ana.png"
+                class="interpolation-image"
+                alt="Interpolate start reference image."/>
+          <p>Dataset statistics.</p>
+
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -461,17 +507,12 @@
     <div class="columns is-centered">
       <div class="column is-8">
         <div class="content">
+
           <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
+            This website is adapted from <a
+            href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license"
+            href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+Commons Attribution-ShareAlike 4.0 International License</a>. 
           </p>
         </div>
       </div>
