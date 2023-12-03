@@ -33,12 +33,34 @@
         href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
+  <link rel="stylesheet" href="./static/css/float.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.css"> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/katex@0.10.0/dist/katex.min.js"></script> -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+     
+      "HTML-CSS": {
+          styles: {
+              '.MathJax_Display': {
+                  color: "black"
+              }
+          }
+      }
+    });
+
+    
+  </script>
+
 </head>
 <body>
 
@@ -91,11 +113,11 @@
           <h1 class="title is-1 publication-title"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/> PixelLM:Pixel Reasoning with Large Multimodal Model</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="">Zhongwei Ren</a><sup>1,*</sup>,</span>
+              <a href="">Zhongwei Ren</a><sup>1*</sup>,</span>
             <span class="author-block">
-              <a href="">Zhicheng Huang</a><sup>2,*</sup>,</span>
+              <a href="">Zhicheng Huang</a><sup>2*</sup>,</span>
             <span class="author-block">
-              <a href="">Yunchao Wei</a><sup>1,<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>,
+              <a href="">Yunchao Wei</a><sup>1<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>,
             </span>
             <span class="author-block">
               <a href="">Yao Zhao</a><sup>1</sup>,
@@ -107,7 +129,7 @@
               <a href="">Jiashi Feng</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="">Xiaojie Jin</a><sup>3</sup>
+              <a href="">Xiaojie Jin</a><sup>3*<math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>‡</mo></math></sup>
             </span>
           </div>
 
@@ -118,7 +140,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block">(<sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>Correspondence)</span>
+            <span class="author-block">(<sup>*</sup>Equal Contribution,<sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>†</mo></math></sup>Correspondence,<sup><math xmlns="http://www.w3.org/1998/Math/MathML"><mo>‡</mo></math></sup>Project Lead)</span>
           </div>
 
           <div class="column has-text-centered">
@@ -257,7 +279,7 @@
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
+      <div class="column is-five-fifths">
         <h2 class="title is-3"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Abstract</h2>
         <div class="content has-text-justified">
           <!-- <p>
@@ -282,29 +304,46 @@
         </div>
       </div>
     </div>
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <!-- <h2 class="title is-3"></h2> -->
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/sw2co_xaqPA?si=8iYb4dmL6MVcjbII"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+
   </div>
 </section>
 
-<section class="section">
+<section class="hero is-light is-big", style="margin-top: -35px">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
-      <div class="column is-full-width">
+      <div class="column is-five-fifths">
+        <br>
+        <br>
         <h2 class="title is-3">🔥 Highlights</h2>
       </div>
     </div>
 
     <div class="columns is-centered">
-      <div class="column is-full-width">
+      <div class="column is-five-fifths">
         <p>
-          1. We present PixelLM, a novel LMM for pixel-level reasoning and understanding. It handles tasks with diverse reasoning complexities, maintaining high efficiency.
+          1. <b>We present PixelLM</b>, <span style="color: rgb(176, 152, 31)">a novel LMM for pixel-level reasoning and understanding.</span> PixelLM proficiently handles tasks with an arbitrary number of open-set targets and diverse reasoning complexities. Its design maintains the fundamental structure of LMMs while avoiding additional, costly segmentation models, enhancing both efficiency and transferability to diverse applications. 
         </p>
+        <br>
         <p>
-          2. We construct MUSE, a high-quality multi-target reasoning segmentation dataset, facilitating model training and evaluation in future research.
+          2. <b>We construct MUSE</b>, <span style="color: rgb(176, 152, 31)">a high-quality multi-target reasoning segmentation dataset,</span> facilitating model training and evaluation in future research. Utilizing a GPT-4V-aided data curation pipeline, we create 246k question-answer pairs, covering 0.9 million instances. Our extensive ablation studies confirm the dataset's effectiveness in stimulating the model’s pixel reasoning capabilities.
         </p>
+        <br>
         <p>
-          3. PixelLM achieves new state-of-the-art results across a spectrum of benchmarks, significantly surpassing competing methods.
+          3. <b>PixelLM achieves new state-of-the-art results</b> across a spectrum of benchmarks, significantly surpassing competing methods.
         </p>
-    
+        <br><br>
       </div>
     </div>
   </div>
@@ -355,7 +394,7 @@
     <!-- Animation. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"> <img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Model Architecture</h2>
+        <h2 class="title is-3"> <img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="5%"/>  Model Architecture</h2>
       </div>
     </div>
     <div class="columns is-centered ">
@@ -367,53 +406,96 @@
         <!-- <div class="columns is-vcentered interpolation-panel"> -->
           
           <p>
-            PixelLM features a streamlined architecture, comprising four main parts: i) a pretrained CLIP-ViT vision encoder which aligns with text, ii) a large language model iii) a lightweight pixel decoder and iv) a segmentation codebook.  PixelLM processes image and query text, yielding interleaved text description and corresponding masks for varied target.
+            PixelLM features a streamlined architecture, comprising four main parts: <i>i)</i> a pretrained CLIP-ViT vision encoder \( \mathcal{I} \) which aligns with text, <i>ii)</i> a large language model \( \mathcal{F} \), <i>iii)</i> a lightweight pixel decoder \( \mathcal{D} \) and <i>iv)</i> a segmentation codebook \( C_{\text{seg}} \).  PixelLM processes image \( x_{\text{img}} \) and query text \( x_{\text{txt}} \), yielding interleaved text description and corresponding masks for varied target. At the core of PixelLM is <span style="color: rgb(176, 152, 31)">the novel lightweight decoder</span> and <span style="color: rgb(176, 152, 31)">the holistic segmentation codebook.</span> The codebook contains learnable tokens which encode contexts and knowledge pertinent to targets referencing at different visual scales. The pixel decoder then produces target masks based on the hidden embeddings from the codebook tokens in conjunction with image features. Thanks to this design, PixelLM can generate high-quality masks without external segmentation models, significantly boosting its efficiency. Furthermore, we propose a target refinement loss to enhance the model's capability of differentiating between multiple targets, thus further improving the mask quality.
           </p>
           
         <div class="column is-centered has-text-centered">
           <img src="./static/images/overallV2.png"
                 class="interpolation-image"
                 alt="Interpolate start reference image."/>
-          <p>Overview of the proposed PixelLM model architecture. (Left) Overall architecture. (Right) The proposed lightweigh pixel decoder. Trainable LoRA parameters are incorporated into the LLM. All parameters except those for the CLIP encoder and LLM are trainable.</p>
+                <figcaption>Overview of the proposed PixelLM model architecture. (Left) Overall architecture. (Right) The proposed lightweigh pixel decoder. Trainable LoRA parameters are incorporated into the LLM. All parameters except those for the CLIP encoder and LLM are trainable.</figcaption>
         </div>
-          <!-- <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
-            </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
-          </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div> -->
-        <!-- </div> -->
+        
         <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <!-- <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
+        <div class="column is-five-fifths">
+          <div class="content">
+            <h2 class="title is-4">Segmentation codebook</h2>
+           <div class="float-right">
+            <figure>
+            <img src="./static/images/multi_token_codebook_v7.png"
+            class="float-right"
+               alt="Interpolate start reference image." width="400" />
+               <!-- <figcaption style="width:400px;">The segmentation codebook example comprises two scales with two tokens each. Each attention map results from the interaction between one token and its corresponding image feature in the decoder. The first two rows depict the token fusion mechanism, while the final row demonstrates a failure case arising from the utilization of only one token.</figcaption> -->
+              </figure>
+              </div>
+              
+           
+            <p>
+              Specifically, the codebook consists of multiple token groups, each corresponding to a semantic scale of visual features from the image encoder. Formally, we define \(C_{\text{seg}} = \left\{ c_n^{\ell} \in \mathbb{R}^d \right\}_{n=1,\ell=1}^{N,L}\), where \(L\) and \(N\) denote the number of visual scales and tokens per group, respectively, and \(d\) represents the hidden dimension in LMMs. For clarity, we first set \(N=1\) and expound on how the codebook tokens are integrated within the LMMs to encode requisite information for target mask generation.
+            </p>
+            
+            <p>
+For an input image \(x_{\text{img}}\), the vision encoder \(\mathcal{I}\) extracts a spectrum of multi-scale visual features \(I_{\text{img}} = \{ I_{\text{img}}^{\ell} \}_{\ell=1}^{L}\) from \(\mathcal{I}(x_{\text{img}})\), comprising \(L\) visual features output at select layers of \(\mathcal{I}\). The output of the final layer, \(I_{\text{img}}^{L}\), encapsulates global image information and is transformed into the language space via a vision-to-language projection layer \(p_{V\rightarrow T}\). Simultaneously, a vision-to-decoder projection \(p_{V\rightarrow D}\) transforms all \(I_{\text{img}}\) features, resulting in \(f_{\text{img}} = \left\{f_{\text{img}}^{\ell}=p_{V\rightarrow D}(I_{\text{img}}^{\ell})\right\}_{\ell=1}^{L}\). The codebook tokens, combined with the input image and text, are then processed by the LLM to generate interleaved response \(y_{\text{res}}\) in an auto-regressive way:
+\begin{equation*}
+y_{\text{res}}=\mathcal{F}(p_{V\rightarrow T}(I_{\text{img}}^{L}),x_{\text{txt}}, C_{\text{seg}}).
+\end{equation*}
+To help understand this process, consider an example of text query ''Segment the apple on the left''. Then, the output \(y_{\text{res}}\) contains \(L\) tokens of \(C_{\text{seg}}\): '' The apple is \(c^1,\dots,c^L\)''. The corresponding hidden embeddings (i.e. the output of last layer of \(\mathcal{F}\)) of \(C_{\text{seg}}\) are represented as \(h=\left\{h^{\ell}\right\}_{\ell=1}^{L}\), which are inputs to the pixel decoder \(\mathcal{D}\) alongside image features \(f_{\text{img}}\) for mask generation. Each token interacts with the image feature at its corresponding scale.
+            </p>
+            <p>
+We then set \(N>1\) and explain the rationale. As shown in the upper right figure, scenarios featuring multiple targets or inherent complexity challenge the capacity of a single token to fully encapsulate target semantics, even though the LLM can provide accurate textual responses. In the figure, the segmentation codebook example comprises two scales with two tokens each. Each attention map results from the interaction between one token and its corresponding image feature in the decoder. The first two rows depict the token fusion mechanism, while the final row demonstrates a failure case arising from the utilization of only one token.
+</p>
+<p>
+To enhance the model's interpretative ability in complex reasoning scenarios, we propose a token fusion mechanism that utilizes multiple tokens within each scale group, i.e. \(c^{\ell} = \left\{c_n^{\ell}\right\}_{n=1}^N\). 
+Prior to decoder, a linear projection layer \(\phi\) is employed to transform the hidden states of grouped tokens into \(h^{\ell}=\phi(h_1^{\ell},\dots,h_N^{\ell})\).
+The figure illustrates the utilization of multiple tokens per group. The visualization of each attention map post decoder reveals that disparate tokens yield complementary information, culminating in enhanced mask compared to a single token setting.
+            </p>
+           
+            
+            
+          </div>
         </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div> -->
-        <!--/ Re-rendering. -->
+
+          <div class="column is-five-fifths">
+            <div class="content">
+              <h2 class="title is-4">Pixel decoder</h2>
+             
+                
+    
+              <p>
+                We design a novel and lightweight pixel decoder \(\mathcal{D}\) that are engineered to adeptly harness the multi-scale features  from the vision encoder. This decoder is tasked with learning the transformation of these features, in conjunction with the hidden embeddings from \(C_{\text{seg}}\), into precise segmentation masks. Such an design obviates the need for extra costly segmentation models like SAM, thus significantly improving efficiency.
+              </p>
+              
+              <p>
+                As depicted in the right panel of the model architecture figure, \(\mathcal{D}\) consists  of \(L\) attention blocks \(\left\{Attn^{\ell}\right\}_{\ell=1}^{L}\), each corresponding to distinct scales of image features and the codebook. For each targeted mask generation, \(\mathcal{D}\) sequentially produces a mask score map \(m^{\ell}\) at each scale \(\ell\), 
+                which then directs the model’s attention to regions of higher relevance in the subsequent scale \(\ell - 1\). This strategy works by guiding the model to focus on areas with high confidence scores in \(m^{\ell}\), thereby facilitating more accurate mask generation.
+                \[
+                \begin{equation*}
+                \begin{aligned}
+                f_{img}^{\ell^{\prime}} &= \left\{ 
+                    \begin{array}{lc}
+                        f_{img}^L&\ell=L \\
+                        f_{img}^{\ell} \odot (\sigma(m^{\ell+1}) + 1) &\ell< L
+                        \end{array} \right. \\
+                        
+                    m^{\ell}&=Attn^{\ell}(h^{\ell},f_{img}^{\ell^{\prime}}).
+                    \end{aligned} 
+                    \end{equation*}
+
+                \]
+                              </p>
+                              <p>
+                  We then set \(N>1\) and explain the rationale. As shown in the upper right figure, scenarios featuring multiple targets or inherent complexity challenge the capacity of a single token to fully encapsulate target semantics, even though the LLM can provide accurate textual responses. In the figure, the segmentation codebook example comprises two scales with two tokens each. Each attention map results from the interaction between one token and its corresponding image feature in the decoder. The first two rows depict the token fusion mechanism, while the final row demonstrates a failure case arising from the utilization of only one token.
+                  </p>
+                  <p>
+                    where \(f_{img}^{\ell^{\prime}}\) is the modulated feature at scale \(\ell\), \(\sigma\) is sigmoid function and \(\odot\) is element-wise multiplication. Finally, we learn the weighting factors \(\gamma=[\gamma^{\ell}]_{\ell=1}^{L}\) to combine mask maps at all scales to get the final segmentation result:
+                    \(\hat{M}=\sum_{\ell=1}^{L} \gamma^{\ell}m^{\ell}\) where \(| \mathbf{\gamma} | = 1\).
+              </p>
+             
+              
+              
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
@@ -427,14 +509,14 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="6%"/>  Multi-reasoning segmentation dataset (MUSE)</h2>
+        <h2 class="title is-3"><img src="./static/images/Pixu_logo.png" class="interpolation-image" alt="Interpolate start reference image." width="5%"/>  Multi-reasoning segmentation dataset (MUSE)</h2>
       </div>
     </div>
 
     <div class="columns is-centered">
       <div class="column is-full-width">
         <p>
-          We introduce a structured annotation pipeline for constructing the multi-target reasoning segmentation (MUSE) data. MUSE stands out with its open-set concepts, detailed object descriptions, complex multi-target question-answer pairs, and instance-level mask annotations. Specifically, we feed all the instance category names and corresponding bounding box coordinates in the image to GPT-4V. Using carefully crafted prompts, GPT-4V autonomously selects instances to construct question-answer pairs relevant to the image content. 
+          To facilitate model training and evaluation in this area of research, we develop MUSE, the first comprehensive multi-target reasoning segmentation dataset.  MUSE stands out with its open-set concepts, detailed object descriptions, complex multi-target question-answer pairs, and instance-level mask annotations. Specifically, we feed all the instance category names and corresponding bounding box coordinates in the image to GPT-4V. Using carefully crafted prompts, GPT-4V autonomously selects instances to construct question-answer pairs relevant to the image content. 
         </p>
         <div class="column is-centered has-text-centered">
           <img src="./static/images/data_example.png"
@@ -456,26 +538,99 @@
   </div>
 </section>
 
-<section class="section">
+<section class="section" style="margin-top: -70px">
   <div class="container is-max-desktop">
 
-    <p>
-      A total of 910k high-quality instance segmentation masks are selected from the LVIS dataset, along with detailed textual descriptions based on image content. Utilizing these instances, we construct 246k question-answer pairs, averaging 3.7 targets per answer. This dataset is then divided into three splits: {\tt train}, {\tt val}, and {\tt test}, containing 239k, 2.8k, and 4.3k question-answer pairs, respectively. The test split comprises two parts:  the number of targets involved in the question are less or more than three.
-    </p>
-    <div class="columns is-centered">
+    
+    <!-- <div class="columns is-centered">
       <div class="column is-full-width">
         <div class="column is-centered has-text-centered">
           
 
           
-          <img src="./static/images/data_ana.png"
-                class="interpolation-image"
-                alt="Interpolate start reference image."/>
-          <p>Dataset statistics.</p>
-
+      
         </div>
       </div>
+    </div> -->
+    <div class="column is-five-fifths">
+      <div class="content">
+        <h2 class="title is-4">Dataset statistics</h2>
+        <img src="./static/images/data_ana.png"
+        class="interpolation-image"
+        alt="Interpolate start reference image."/>
+          
+        <p>
+          A total of 910k high-quality instance segmentation masks are selected from the LVIS dataset, along with detailed textual descriptions based on image content. Utilizing these instances, we construct 246k question-answer pairs, averaging 3.7 targets per answer. This dataset is then divided into three splits: train, val, and test, containing 239k, 2.8k, and 4.3k question-answer pairs, respectively. The test split comprises two parts:  the number of targets involved in the question are less or more than three.
+        </p>
+        <p>
+        <b>Category statistics.</b> There are over 1000 categories in MUSE from the original LVIS dataset, and 0.9 million instances with unique description that vary based on the context of the question-answer pairs. Figure (a) shows the number of instances per category on all question-answer pairs. The distribution inherit the low-shot nature of LVIS.  
+      </p>
+      <p>
+        <b>Token count.</b> Figure (b) presents the distribution of instances by token count in their descriptions, highlighting a wide range that exceeds 100 tokens in the most extensive cases. These descriptions are not limited to simple category names; rather, they are substantially enriched with detailed information about each instance, encompassing aspects like appearance, attributes, and relationships with other objects, thanks to our GPT-4V-based data generation pipeline. The depth and variety of information in the dataset bolster the trained model's generalization capabilities, enabling it to effectively address open-set questions.
+
+      </p>
+
+      <p>
+        <b>Target count.</b> Figure (c) presents statistics on the number of targets in each question-answer pair. The average number of targets is 3.7, with the maximum number of targets in a single pair reaching up to 34. This number can cover most scenarios of target reasoning for a single image.
+
+      </p>
+        
+        
+      </div>
     </div>
+
+    <div class="column is-five-fifths">
+      <div class="content">
+        <h2 class="title is-4">Evaluation</h2>
+        <img src="./static/images/supp_evaluation.png"
+        class="interpolation-image"
+        alt="Interpolate start reference image."/>
+          
+        <p>
+          Let us denote by \(M=\{M_g\}_{g=1}^G\) the ground truth set of \(G\) objects, and \(\hat{M}=\{\hat{M_k}\}_{k=1}^K\) the set of \(K\) predictions. Motivated by ~\cite{detr}, assuming \(K\) is not equal to \(G\), we use \(\varnothing\) (no objects) to pad the smaller set and both sets finally have size \(P={\rm max}(G, K)\). 
+        </p>
+        <p>
+          <b>(1)</b> We find a bipartite matching between these two sets by searching for a permutation of \(P\) elements, \(\sigma\in\mathfrak{S}_P\), with the lowest cost:
+          \begin{equation*}
+              \hat{\sigma} = \mathop{\arg\min}\limits_{\sigma\in\mathfrak{S}_P} \sum_{i}^{P} \mathcal{L}_{match}(M_i, \hat{M}_{\sigma(i)})  
+          \end{equation*}
+        </p>
+        <p> 
+          where \(\mathcal{L}_{match}(M_i, \hat{M}{\sigma(i)})\) is a pairwise matching cost between ground truth \(M_i\) and a prediction with index \(\sigma(i)\). We compute this optimal assignment efficiently with the Hungarian algorithm. We define \(\mathcal{L}_{match}(M_i, \hat{M}{\sigma(i)})\) as \(\mathcal{L}_{bce}(M_i, \hat{M}{\sigma(i)}) + \mathcal{L}_{dice}(M_i, \hat{M}{\sigma(i)})\).
+        </p>
+          <p> 
+          <b>(2)</b> Based on the matching results, we modify the generated response \(y_{res}\) to \(y_{res}^{\prime}\): since each \(\hat{M}_i\) originates from a segmentation token sequence in \(y_{res}\), we replace each sequence with the GPT-generated description of \(M_i\). 
+        </p>
+        <p> 
+          <b>(3)</b> We use a carefully designed prompt for GPT-3.5 to assign a score \(s_i\) to each \(\hat{M}_i\) in the answer in a single step. An example of this methodology is depicted in the above figure. The empty predictions are directly scored with 0. 
+        </p>
+        <p> 
+          The above three steps assess the model's capability to generate outputs where masks are intertwined with text descriptions, and evaluate how accurately these masks correspond to their respective text descriptions. Then we evaluate the quality of the masks.
+
+        </p>
+        <p> 
+          <b>(4)</b> The final IoU of each prediction is:
+          \begin{equation*}
+          \begin{aligned}
+          {\rm Intersection}_i &= \left\{ 
+              \begin{array}{lc}
+                  {\rm Intersection}_i &s_i>0.5 \\
+                  0 &s_i\leq0.5
+              \end{array} \right. \\
+          {\rm IoU}_i &= {\rm Intersection}_i / {\rm Union}_i
+          \end{aligned} 
+          \end{equation*}
+          And the final IoU\(_{img}\) of each image is:
+          \begin{equation*}
+          {\rm IoU}_{img} = \sum\nolimits_i {\rm IoU}_i / P
+          \end{equation*}
+          Based on the IoU scores, we can calculate gIoU and cIoU metric like referring segmentation dataset.
+          </p>
+          </p>
+        
+      </div>
+    </div>
+
   </div>
 </section>
 
